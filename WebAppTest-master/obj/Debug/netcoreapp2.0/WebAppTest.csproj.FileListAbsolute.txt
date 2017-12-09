@@ -1,0 +1,11 @@
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\obj\Debug\netcoreapp2.0\WebAppTest.csprojResolveAssemblyReference.cache
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\bin\Debug\netcoreapp2.0\WebAppTest.deps.json
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\bin\Debug\netcoreapp2.0\WebAppTest.runtimeconfig.json
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\bin\Debug\netcoreapp2.0\WebAppTest.runtimeconfig.dev.json
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\bin\Debug\netcoreapp2.0\WebAppTest.dll
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\bin\Debug\netcoreapp2.0\WebAppTest.pdb
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\obj\Debug\netcoreapp2.0\WebAppTest.csproj.CoreCompileInputs.cache
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\obj\Debug\netcoreapp2.0\WebAppTest.AssemblyInfoInputs.cache
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\obj\Debug\netcoreapp2.0\WebAppTest.AssemblyInfo.cs
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\obj\Debug\netcoreapp2.0\WebAppTest.dll
+C:\Users\BFuentes\source\repos\WebAppTest\WebAppTest\obj\Debug\netcoreapp2.0\WebAppTest.pdb

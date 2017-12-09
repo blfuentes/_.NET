@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Survey>
+
+	<Undefined>
+	<Duration>duration</Duration>
+	<DispositionCode>dispcode</DispositionCode>
+	<Quality>quality</Quality>
+	<Lastpage>lastpage</Lastpage>
+	<p1>p_0001</p1>
+	<p2>p_0002</p2>
+	</Undefined>
+
+	<Person>
+	    <TestingPerson>tester</TestingPerson>
+		<ExternalPersonId>external_lfdn</ExternalPersonId>
+		<PersonId>Lfdn</PersonId>
+		<Sex>Sex</Sex>
+		<Age>Age</Age>
+		<NetIncomeOfHoushold>hhne</NetIncomeOfHoushold>
+		<MaritialStatus>marital_status</MaritialStatus>
+		<Education>education</Education>
+		<Occupation>occupation</Occupation>
+		<HouseholdSize>hh_gr</HouseholdSize>
+		<NumberOfChildren>kids</NumberOfChildren>
+		<Region>region</Region>
+		<HouseholdLeading>hhl</HouseholdLeading>
+	</Person>
+
+	<Media>
+		<ContactVariable>
+			<TV>Cont_tv</TV>
+			<Print>Cont_pri</Print>
+			<OutOfHome>Cont_out</OutOfHome>
+			<Online>Cont_onl</Online>
+			<OnlineVideo>Cont_vid</OnlineVideo>
+			<Cinema>Cont_cin</Cinema>
+			<Radio>Cont_rad</Radio>
+		</ContactVariable>
+
+		<TvUtilizationParameter>
+			<ChannelUtilization>v11ch_@A</ChannelUtilization>
+			<DaytimeUtilizationForWeekDays>v12dt_@B</DaytimeUtilizationForWeekDays>
+			<UtilizationForChannelOnWeekDays>v13chdt_@A_@B</UtilizationForChannelOnWeekDays>
+			<DayTimeUtilizationForWeekends>v15wt_@B</DayTimeUtilizationForWeekends>			
+			<UtilizationForChannelOnWeekend>v16chwt_@A_@B</UtilizationForChannelOnWeekend>
+		</TvUtilizationParameter>
+
+		<PrintUtilizationParameter>
+			<UtilizationForMagazines>V20pri_@C</UtilizationForMagazines>
+		</PrintUtilizationParameter>
+	</Media>
+
+	<Brand>
+		<AidedBrandAwareness>
+			<ForBrand>aba_@X</ForBrand>
+		</AidedBrandAwareness>
+
+		<AidedAdvertisingAwareness>
+			<ForBrand>aaab_@X</ForBrand>
+			<ForProduct>aaap_@X_@Y</ForProduct>
+		</AidedAdvertisingAwareness>
+
+		<ProductAidedAwareness>
+			<ForProduct>apa_@X_@Y</ForProduct>
+		</ProductAidedAwareness>
+
+		<RecognitionVariable>
+			<ChannelTV>recTV_@Z_@X</ChannelTV>
+			<ChannelPrint>recPri_@Z_@X</ChannelPrint>
+			<ChannelOutOfHome>recOut_@Z_@X</ChannelOutOfHome>
+			<ChannelOnline>recOnl_@Z_@X</ChannelOnline>
+			<ChannelOnlineVideo>recVid_@Z_@X</ChannelOnlineVideo>
+			<ChannelCinema>recCin_@Z_@X</ChannelCinema>
+			<ChannelRadio>recRad_@Z_@X</ChannelRadio>		
+		</RecognitionVariable>
+
+		<UnaidedBrandAwareness>
+			<ForBrand>m_ubaB_@X</ForBrand>
+			<ForProduct>m_ubaP_@Y</ForProduct>
+		</UnaidedBrandAwareness>
+
+		<RelevantSet>
+			<ForBrand>m_rsB_@X</ForBrand>
+			<ForProduct>m_rsP_@Y</ForProduct>
+		</RelevantSet>
+
+		<FirstChoiceVariable>
+			<ForBrand>m_fcB_@X</ForBrand>
+			<ForProduct>m_fcP_@Y</ForProduct>
+		</FirstChoiceVariable>
+
+		<LikeabilityVariable>
+			<ForBrand>m_likeB_@X</ForBrand>
+			<ForProduct>m_likeP_@Y</ForProduct>
+		</LikeabilityVariable>
+
+		<ImageVariable>
+			<ImageStatementForBrand>m_imageB_@X_@W</ImageStatementForBrand>
+			<ImageStatementForProduct>m_imageP_@Y_@W</ImageStatementForProduct>
+		</ImageVariable>
+
+		<AdEvaluationVariable>
+			<EvaluationStatementForAd>m_adev_@Z_@U</EvaluationStatementForAd>
+		</AdEvaluationVariable>
+		
+		<EngagementVariable>
+		    <EngagementStatementForAd>m_engage_@Z_@V</EngagementStatementForAd>
+		</EngagementVariable>
+	</Brand>
+</Survey> 

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAA0B2C9-7AE5-411C-8D4B-B48B404AA16C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Formatter</RootNamespace>
+    <AssemblyName>Formatter</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Checker.cs" />
+    <Compile Include="EncodingTools.cs" />
+    <Compile Include="TextFileEncodingDetector.cs" />
+    <Compile Include="Multilang\CMLangConvertCharset.cs" />
+    <Compile Include="Multilang\CMLangConvertCharsetClass.cs" />
+    <Compile Include="Multilang\CMLangString.cs" />
+    <Compile Include="Multilang\CMLangStringClass.cs" />
+    <Compile Include="Multilang\CMultiLanguage.cs" />
+    <Compile Include="Multilang\CMultiLanguageClass.cs" />
+    <Compile Include="Multilang\IEnumCodePage.cs" />
+    <Compile Include="Multilang\IEnumRfc1766.cs" />
+    <Compile Include="Multilang\IEnumScript.cs" />
+    <Compile Include="Multilang\IMLangCodePages.cs" />
+    <Compile Include="Multilang\IMLangConvertCharset.cs" />
+    <Compile Include="Multilang\IMLangFontLink.cs" />
+    <Compile Include="Multilang\IMLangFontLink2.cs" />
+    <Compile Include="Multilang\IMLangLineBreakConsole.cs" />
+    <Compile Include="Multilang\IMLangString.cs" />
+    <Compile Include="Multilang\IMLangStringAStr.cs" />
+    <Compile Include="Multilang\IMLangStringBufA.cs" />
+    <Compile Include="Multilang\IMLangStringBufW.cs" />
+    <Compile Include="Multilang\IMLangStringWStr.cs" />
+    <Compile Include="Multilang\IMultiLanguage.cs" />
+    <Compile Include="Multilang\IMultiLanguage2.cs" />
+    <Compile Include="Multilang\IMultiLanguage3.cs" />
+    <Compile Include="Multilang\ISequentialStream.cs" />
+    <Compile Include="Multilang\IStream.cs" />
+    <Compile Include="Multilang\tagDetectEncodingInfo.cs" />
+    <Compile Include="Multilang\tagMIMECONTF.cs" />
+    <Compile Include="Multilang\tagMIMECPINFO.cs" />
+    <Compile Include="Multilang\tagMIMECSETINFO.cs" />
+    <Compile Include="Multilang\tagMLCPF.cs" />
+    <Compile Include="Multilang\tagMLDETECTCP.cs" />
+    <Compile Include="Multilang\tagMLSTR_FLAGS.cs" />
+    <Compile Include="Multilang\tagRFC1766INFO.cs" />
+    <Compile Include="Multilang\tagSCRIPFONTINFO.cs" />
+    <Compile Include="Multilang\tagSCRIPTINFO.cs" />
+    <Compile Include="Multilang\tagSTATSTG.cs" />
+    <Compile Include="Multilang\tagUNICODERANGE.cs" />
+    <Compile Include="Multilang\_FILETIME.cs" />
+    <Compile Include="Multilang\_LARGE_INTEGER.cs" />
+    <Compile Include="Multilang\_RemotableHandle.cs" />
+    <Compile Include="Multilang\_ULARGE_INTEGER.cs" />
+    <Compile Include="Multilang\__MIDL_IWinTypes_0009.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Data\1111__1272__1497__Survey %28Raw Data%29.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\1111__1276__1501__Print Input.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\1111__1277__1502__TV Input.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\print.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\survey_raw.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\tv.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\1111__1273__1498__Variable Header Definition.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\1111__1274__1499__Static.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\1111__1275__1500__CoDomain.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\coDomain.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\static.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\utf8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\utf8_bom.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\variable_header.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

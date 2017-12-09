@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "TestParams";
+}
+
+<h2>TestParams</h2>
+
+<script type="text/javascript">
+    function runTest() {
+        debugger;
+        var array = [10, 20];
+        //var mydata = ['algo', 'otro'];//JSON.stringify(array);
+        var mydata = [10, 20];
+        var url = '/Home/AjaxCall';
+        $.ajax({
+            type: 'POST',
+            traditional: true,
+            url: url,
+            data: { values: mydata },
+            //dataType: "json",
+            //contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                $('#output').html(result);
+            },
+            error: function (result) {
+                // handle errors
+                debugger;
+                location.href = "/Home/"
+            }
+        });
+    }
+</script>
+
+<div id="" onclick="runTest()">
+    Algo
+</div>
+
+<div id="output">
+
+
+</div>
+

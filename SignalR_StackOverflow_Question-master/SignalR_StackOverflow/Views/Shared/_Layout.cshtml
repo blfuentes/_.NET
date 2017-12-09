@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/jquery.signalR-2.2.0.js" type="text/javascript"></script>
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function () {
+            debugger;
+            $.connection.hub.logging = true;
+            var proxy = $.connection.adminHub;
+
+            proxy.client.receiveNotification = function (message, UnreadCount) {
+                debugger;
+                $("#notification_count").html(UnreadCount);
+                $("#notification_count").show();
+            };
+
+            $.connection.hub.start();
+
+            $.connection.hub.start().done(function () {
+                $('#button1').click(function () {
+                    proxy.server.broadcastNotifications($("#Message").val());
+                });
+            });
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+    <li class="dropdown" id="notification_li">
+        <a href="#" class="fa fa-globe fa-inverse dropdown-toggle"
+           data-canvas="body" style="color:gray;padding-top:17px" data-toggle="dropdown"
+           role="button" aria-haspopup="true" aria-expanded="false">
+            <span id="notification_count" class="notification_count">0</span>
+        </a>
+        <ul class="dropdown-menu" id="popup"></ul>
+    </li>
+
+</body>
+</html>

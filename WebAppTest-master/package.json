@@ -1,0 +1,23 @@
+{
+  "name": "WebAppTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "expose-loader": "^0.7.4",
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
+    "jquery-validation-unobtrusive": "^3.2.6",
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {}
+, "-vs-binding":{"BeforeBuild":["build"]}
+}
