@@ -1,0 +1,11 @@
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\bin\Debug\netcoreapp2.0\TestBootstrap.deps.json
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\bin\Debug\netcoreapp2.0\TestBootstrap.runtimeconfig.json
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\bin\Debug\netcoreapp2.0\TestBootstrap.runtimeconfig.dev.json
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\bin\Debug\netcoreapp2.0\TestBootstrap.dll
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\bin\Debug\netcoreapp2.0\TestBootstrap.pdb
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\obj\Debug\netcoreapp2.0\TestBootstrap.csprojResolveAssemblyReference.cache
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\obj\Debug\netcoreapp2.0\TestBootstrap.csproj.CoreCompileInputs.cache
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\obj\Debug\netcoreapp2.0\TestBootstrap.AssemblyInfoInputs.cache
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\obj\Debug\netcoreapp2.0\TestBootstrap.AssemblyInfo.cs
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\obj\Debug\netcoreapp2.0\TestBootstrap.dll
+c:\users\bfuentes\source\repos\TestBootstrap\TestBootstrap\obj\Debug\netcoreapp2.0\TestBootstrap.pdb
