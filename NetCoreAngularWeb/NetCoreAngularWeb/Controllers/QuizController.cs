@@ -80,7 +80,7 @@ namespace NetCoreAngularWeb.Controllers
         /// </summary> 
         /// <param name="num">the number of quizzes to retrieve</param> 
         /// <returns>the {num} latest Quizzes</returns>
-        [HttpGet("Latest/{num}")]
+        [HttpGet("Latest/{num:int?}")]
         public IActionResult Latest(int num = 10)
         {
             var sampleQuizzes = new List<QuizViewModel>();
