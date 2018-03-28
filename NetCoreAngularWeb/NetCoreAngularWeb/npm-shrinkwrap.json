@@ -1286,9 +1286,9 @@
       }
     },
     "awesome-typescript-loader": {
-      "version": "4.0.1",
-      "resolved": "https://registry.npmjs.org/awesome-typescript-loader/-/awesome-typescript-loader-4.0.1.tgz",
-      "integrity": "sha512-lx6JJXtuNXyrK1DBx/+w6fbnbcfavMz0a2zszZ89yQ/NAAUE6GzIAtfQ2mkD96piClCoxLpbNpTkVi/H8FJn7w==",
+      "version": "3.5.0",
+      "resolved": "https://registry.npmjs.org/awesome-typescript-loader/-/awesome-typescript-loader-3.5.0.tgz",
+      "integrity": "sha512-qzgm9SEvodVkSi9QY7Me1/rujg+YBNMjayNSAyzNghwTEez++gXoPCwMvpbHRG7wrOkDCiF6dquvv9ESmUBAuw==",
       "dev": true,
       "requires": {
         "chalk": "2.3.2",
@@ -1422,7 +1422,7 @@
             "kind-of": {
               "version": "5.1.0",
               "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-5.1.0.tgz",
-              "integrity": "sha1-cpyR4thXt6QZofmqZWhcTDP1hF0=",
+              "integrity": "sha512-NGEErnH6F2vUuXDh+OlbcKW7/wOcfdRHaZ7VWtqCztfHri/++YKmP51OdWeGPuqCOba6kk2OTe5d02VmTB80Pw==",
               "dev": true
             }
           }
@@ -1561,7 +1561,7 @@
         "kind-of": {
           "version": "6.0.2",
           "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-6.0.2.tgz",
-          "integrity": "sha1-ARRrNqYhjmTljzqNZt5df8b20FE=",
+          "integrity": "sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==",
           "dev": true
         },
         "loader-utils": {
@@ -1599,7 +1599,7 @@
         "supports-color": {
           "version": "5.3.0",
           "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.3.0.tgz",
-          "integrity": "sha1-WySsFduA+pJ89SJ6SjP9PEx2dsA=",
+          "integrity": "sha512-0aP01LLIskjKs3lq52EC0aGBAJhLq7B2Rd8HC/DR/PtNNpcLilNmHC12O+hu0usQpo7wtHNRqtrhBwtDb0+dNg==",
           "dev": true,
           "requires": {
             "has-flag": "3.0.0"
@@ -15027,9 +15027,9 @@
       "dev": true
     },
     "typescript": {
-      "version": "2.8.1",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-2.8.1.tgz",
-      "integrity": "sha512-Ao/f6d/4EPLq0YwzsQz8iXflezpTkQzqAyenTiw4kCUGr1uPiFLC3+fZ+gMZz6eeI/qdRUqvC+HxIJzUAzEFdg==",
+      "version": "2.6.2",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-2.6.2.tgz",
+      "integrity": "sha1-PFtv1/beCRQmkCfwPAlGdY92c6Q=",
       "dev": true
     },
     "uglify-js": {
