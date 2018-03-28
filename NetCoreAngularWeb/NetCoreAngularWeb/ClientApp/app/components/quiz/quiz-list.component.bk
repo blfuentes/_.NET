@@ -7,14 +7,18 @@ import { HttpClient } from "@angular/common/http";
     styleUrls: ['./quiz-list.component.css']
 })
 
-export class QuizListComponent implements OnInit{
-    @Input() class!: string;
-    title!: string;
-    selectedQuiz!: Quiz;
-    quizzes!: Quiz[];
+export class QuizListComponent implements OnInit {
+    @Input() class: string;
+    title: string;
+    selectedQuiz: Quiz;
+    quizzes: Quiz[];
+    http: HttpClient;
+    baseUrl: string;
 
-    constructor(private http: HttpClient,
-        @Inject('BASE_URL') private baseUrl: string) {
+    constructor(http: HttpClient,
+        @Inject('BASE_URL') baseUrl: string) {
+        this.http = http;
+        this.baseUrl = baseUrl;
     }
 
     ngOnInit() {
