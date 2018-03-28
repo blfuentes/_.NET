@@ -12,6 +12,49 @@ namespace NetCoreAngularWeb.Controllers
     [Route("api/[controller]")]
     public class QuestionController : Controller
     {
+        #region RESTful conventions methods 
+        /// <summary> 
+        /// Retrieves the Question with the given {id} 
+        /// </summary> 
+        /// <param name="id">The ID of an existing question</param> 
+        /// <returns>the question with the given {id}</returns> 
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            return Content("Not implemented (yet)!");
+        }
+
+        /// <summary> 
+        /// Adds a new Question to the Database 
+        /// </summary> 
+        /// <param name="m">The QuestionViewModel containing the data to insert</param> 
+        [HttpPut]
+        public IActionResult Put(QuestionViewModel m)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary> 
+        /// Edit the Question with the given {id} 
+        /// </summary> 
+        /// <param name="m">The QuestionViewModel containing the data to update</param> 
+        [HttpPost]
+        public IActionResult Post(QuestionViewModel m)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary> 
+        /// Deletes the Question with the given {id} from the Database 
+        /// </summary> 
+        /// <param name="id">The ID of an existing Question</param> 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
         // GET api/question/all 
         [HttpGet("All/{quizId}")]
         public IActionResult All(int quizId)

@@ -41,6 +41,36 @@ namespace NetCoreAngularWeb.Controllers
                     Formatting = Formatting.Indented
                 });
         }
+
+        /// <summary> 
+        /// Adds a new Quiz to the Database 
+        /// </summary> 
+        /// <param name="m">The QuizViewModel containing the data to insert</param> 
+        [HttpPut]
+        public IActionResult Put(QuizViewModel m)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary> 
+        /// Edit the Quiz with the given {id} 
+        /// </summary> 
+        /// <param name="m">The QuizViewModel containing the data to update</param> 
+        [HttpPost]
+        public IActionResult Post(QuizViewModel m)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary> 
+        /// Deletes the Quiz with the given {id} from the Database 
+        /// </summary> 
+        /// <param name="id">The ID of an existing Quiz</param> 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
         #region Attribute-based routing methods
