@@ -13,6 +13,18 @@
                         <span class='fa fa-home'></span> Home
                     </a>
                 </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/about']">
+                        <span class='fa fa-info'>
+                        </span> About
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/login']">
+                        <span class='fa fa-sign-in'>
+                        </span> Login
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
