@@ -59,6 +59,7 @@
         "@angular-devkit/architect": "0.0.8",
         "@angular-devkit/build-optimizer": "0.4.7",
         "@angular-devkit/core": "0.4.7",
+        "@ngtools/webpack": "6.0.0-beta.7",
         "autoprefixer": "8.2.0",
         "cache-loader": "1.2.2",
         "chalk": "2.2.2",
@@ -107,6 +108,18 @@
         "webpack-subresource-integrity": "1.1.0-rc.4"
       },
       "dependencies": {
+        "@ngtools/webpack": {
+          "version": "6.0.0-beta.7",
+          "resolved": "https://registry.npmjs.org/@ngtools/webpack/-/webpack-6.0.0-beta.7.tgz",
+          "integrity": "sha512-npYeqrfsJ5uBOikNuYDy4A8LMGKbgwDssIylQnIhfdHxp0S4Px6/ruRAhEOfzQG7zcxDv1n8ZsyWy+DAqKpVRw==",
+          "dev": true,
+          "requires": {
+            "chalk": "2.2.2",
+            "semver": "5.5.0",
+            "tree-kill": "1.2.0",
+            "webpack-sources": "1.1.0"
+          }
+        },
         "acorn": {
           "version": "5.5.3",
           "resolved": "https://registry.npmjs.org/acorn/-/acorn-5.5.3.tgz",
