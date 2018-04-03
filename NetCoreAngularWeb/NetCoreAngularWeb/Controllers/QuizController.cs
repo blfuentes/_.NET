@@ -12,20 +12,11 @@ using Newtonsoft.Json;
 
 namespace NetCoreAngularWeb.Controllers
 {
-
-    [Route("api/[controller]")]
-    public class QuizController : Controller
+    public class QuizController : BaseApiController
     {
-        #region Private Fields
-        private ApplicationDbContext DbContext;
-        #endregion
-
         #region Constructor
         public QuizController(ApplicationDbContext context)
-        {
-            // Instantiate the ApplicationDbContext through DI
-            DbContext = context;
-        }
+            : base(context) { }
         #endregion Constructor
 
         #region RESTful conventions methods 
@@ -41,7 +32,7 @@ namespace NetCoreAngularWeb.Controllers
             var quiz = DbContext.Quizzes.Where(_i => _i.Id == id).FirstOrDefault();
 
             // handle requests asking for non-existing quizzes
-            if(quiz == null)
+            if (quiz == null)
             {
                 return NotFound(new
                 {
@@ -49,8 +40,7 @@ namespace NetCoreAngularWeb.Controllers
                 });
             }
 
-            return new JsonResult(quiz.Adapt<QuizViewModel>(),
-                new JsonSerializerSettings() { Formatting = Formatting.Indented });
+            return new JsonResult(quiz.Adapt<QuizViewModel>(), JsonSettings);
         }
 
         /// <summary> 
@@ -87,8 +77,7 @@ namespace NetCoreAngularWeb.Controllers
             DbContext.SaveChanges();
 
             // return the newly-created Quiz to the client.
-            return new JsonResult(quiz.Adapt<QuizViewModel>(),
-                new JsonSerializerSettings() { Formatting = Formatting.Indented });
+            return new JsonResult(quiz.Adapt<QuizViewModel>(), JsonSettings);
         }
 
         /// <summary> 
@@ -106,7 +95,7 @@ namespace NetCoreAngularWeb.Controllers
             var quiz = DbContext.Quizzes.Where(_q => _q.Id == model.Id).FirstOrDefault();
 
             // handle request asking for non-existing quizzes
-            if(quiz == null)
+            if (quiz == null)
             {
                 return NotFound(new
                 {
@@ -129,8 +118,7 @@ namespace NetCoreAngularWeb.Controllers
             DbContext.SaveChanges();
 
             // return the updated Quiz to the client.
-            return new JsonResult(quiz.Adapt<QuizViewModel>(),
-                new JsonSerializerSettings() { Formatting = Formatting.Indented });
+            return new JsonResult(quiz.Adapt<QuizViewModel>(), JsonSettings);
         }
 
         /// <summary> 
@@ -178,11 +166,7 @@ namespace NetCoreAngularWeb.Controllers
                 .Take(num)
                 .ToArray();
             return new JsonResult(
-                latest.Adapt<QuizViewModel[]>(),
-                new JsonSerializerSettings()
-                {
-                    Formatting = Formatting.Indented
-                });
+                latest.Adapt<QuizViewModel[]>(), JsonSettings);
         }
 
         /// <summary>
@@ -199,11 +183,7 @@ namespace NetCoreAngularWeb.Controllers
                 .Take(num)
                 .ToArray();
             return new JsonResult(
-                latest.Adapt<QuizViewModel[]>(),
-                new JsonSerializerSettings()
-                {
-                    Formatting = Formatting.Indented
-                });
+                latest.Adapt<QuizViewModel[]>(), JsonSettings);
         }
 
         /// <summary>
@@ -220,11 +200,7 @@ namespace NetCoreAngularWeb.Controllers
                 .Take(num)
                 .ToArray();
             return new JsonResult(
-                latest.Adapt<QuizViewModel[]>(),
-                new JsonSerializerSettings()
-                {
-                    Formatting = Formatting.Indented
-                });
+                latest.Adapt<QuizViewModel[]>(), JsonSettings);
         }
         #endregion
     }
