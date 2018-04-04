@@ -717,13 +717,11 @@
       "dev": true
     },
     "@ngtools/webpack": {
-      "version": "6.0.0-beta.8",
-      "resolved": "https://registry.npmjs.org/@ngtools/webpack/-/webpack-6.0.0-beta.8.tgz",
-      "integrity": "sha512-PPncA96yL+s1DxrhoR+7ThdVqXJdQJu2Ye+BnXzylXerJJnwRJheohV7YSTeVb3qhNYA9AZpW9UbmBcuG0auCw==",
+      "version": "6.0.0-rc.0",
+      "resolved": "https://registry.npmjs.org/@ngtools/webpack/-/webpack-6.0.0-rc.0.tgz",
+      "integrity": "sha512-QP7jEh/erMhpmqvqQa1WUNMaLw+KQZWB/a6k/BksvQxubyMwE2GxF0vzj8aNDymxRKW9ecHa1rYqaBj41jZefQ==",
       "dev": true,
       "requires": {
-        "chalk": "2.2.2",
-        "semver": "5.5.0",
         "tree-kill": "1.2.0",
         "webpack-sources": "1.1.0"
       }
@@ -11684,9 +11682,9 @@
       }
     },
     "popper.js": {
-      "version": "1.14.1",
-      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.14.1.tgz",
-      "integrity": "sha1-uIFeXNpvYvwgQuR2GGSfdYZuZ1M=",
+      "version": "1.14.2",
+      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.14.2.tgz",
+      "integrity": "sha1-Bm6OFhPmXmm6BQ9LeOe9TI1U5EM=",
       "dev": true
     },
     "portfinder": {
@@ -17465,9 +17463,9 @@
       }
     },
     "zone.js": {
-      "version": "0.8.24",
-      "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.24.tgz",
-      "integrity": "sha512-j9S2mKbNPm++vhn4SR4gWoB44bXL71nZ4t0ihk2yxic95Pb1l26Yex38w2/4djh0v72NO1cOYAPw8swMGYjeLw==",
+      "version": "0.8.25",
+      "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.25.tgz",
+      "integrity": "sha512-/4HpggPPo8aVMDhB18X0734eZftRNPR8Y9kURWzwzXMFi5rp6Igk5kFrlIIY6AueLlm1zcvi2WBOqBTvrX+0Rw==",
       "dev": true
     }
   }

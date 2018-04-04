@@ -18,7 +18,7 @@
     "@angular/platform-browser-dynamic": "5.2.9",
     "@angular/platform-server": "5.2.9",
     "@angular/router": "5.2.9",
-    "@ngtools/webpack": "^6.0.0-beta.8",
+    "@ngtools/webpack": "^6.0.0-rc.0",
     "@types/chai": "4.1.2",
     "@types/jasmine": "2.8.6",
     "@types/webpack-env": "1.13.5",
@@ -47,7 +47,7 @@
     "karma-cli": "1.0.1",
     "karma-jasmine": "1.1.1",
     "karma-webpack": "3.0.0",
-    "popper.js": "^1.14.1",
+    "popper.js": "^1.14.2",
     "preboot": "6.0.0-beta.3",
     "raw-loader": "0.5.1",
     "reflect-metadata": "0.1.12",
@@ -60,6 +60,6 @@
     "webpack-cli": "^2.0.13",
     "webpack-hot-middleware": "2.21.2",
     "webpack-merge": "4.1.2",
-    "zone.js": "0.8.24"
+    "zone.js": "0.8.25"
   }
 }
