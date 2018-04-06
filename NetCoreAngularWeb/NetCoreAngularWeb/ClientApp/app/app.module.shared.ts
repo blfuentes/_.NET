@@ -19,6 +19,8 @@ import { ResultEditComponent } from './components/result/result-edit.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { QuizSearchComponent } from './components/quiz/quiz-search.component';
+
 
 @NgModule({
     declarations: [
@@ -36,7 +38,8 @@ import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.co
         ResultEditComponent,
         AboutComponent,
         LoginComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        QuizSearchComponent
     ],
     imports: [
         CommonModule,
