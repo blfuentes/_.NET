@@ -13,8 +13,8 @@
                 <td>{{answer.Text}}</td>
                 <td>{{answer.Value}}</td>
                 <td>
-                    <input type="button" value="Edit" (click)="onEdit(answer)" />
-                    <input type="button" value="Delete" (click)="onDelete(answer)" />
+                    <input type="button" value="Edit" (click)="onEdit(answer)" class="btn btn-sm btn-warning"/>
+                    <input type="button" value="Delete" (click)="onDelete(answer)" class="btn btn-sm btn-danger" />
                 </td>
             </tr>
         </tbody>
@@ -24,4 +24,4 @@
     This questions has no answers (yet):
     click the <strong>Add a new Answer</strong> button to add the first one!
 </div>
-<input type="button" value="Add a new Answer" (click)="onCreate()" />
+<input type="button" value="Add a new Answer" (click)="onCreate()" class="btn btn-sm btn-primary"/>

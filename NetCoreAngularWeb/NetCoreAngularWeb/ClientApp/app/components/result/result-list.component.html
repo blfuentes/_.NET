@@ -22,9 +22,9 @@
                 </td>
                 <td>
                     <input type="button" value="Edit"
-                           (click)="onEdit(result)" />
+                           (click)="onEdit(result)" class="btn btn-sm btn-warning"/>
                     <input type="button" value="Delete"
-                           (click)="onDelete(result)" />
+                           (click)="onDelete(result)" class="btn btn-sm btn-danger"/>
                 </td>
             </tr>
         </tbody>
@@ -34,4 +34,4 @@
     This quiz has no results (yet):
     click the <strong>Add a new Result</strong> button to add the first one!
 </div>
-<input type="button" value="Add a new Result" (click)="onCreate()" />
+<input type="button" value="Add a new Result" (click)="onCreate()" class="btn btn-sm btn-primary"/>

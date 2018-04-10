@@ -19,9 +19,9 @@
     </div>
 
     <div>
-        <input *ngIf="editMode" type="button" value="Apply Changes" (click)="onSubmit(answer)" />
-        <input *ngIf="!editMode" type="button" value="Create the Answer!" (click)="onSubmit(answer)" />
-        <input type="button" value="Cancel" (click)="onBack()" />
+        <input *ngIf="editMode" type="button" value="Apply Changes" (click)="onSubmit(answer)"  class="btn btn-success" />
+        <input *ngIf="!editMode" type="button" value="Create the Answer!" (click)="onSubmit(answer)" class="btn btn-sm btn-primary"/>
+        <input type="button" value="Cancel" (click)="onBack()" class="btn btn-sm btn-default"/>
     </div>
 </div>
 
