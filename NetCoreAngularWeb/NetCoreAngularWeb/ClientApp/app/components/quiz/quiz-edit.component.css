@@ -12,3 +12,7 @@
 .quiz-edit .commands {
   margin-top: 20px;
 }
+.form-control-feedback {
+  top: 1px;
+  float: right;
+}
