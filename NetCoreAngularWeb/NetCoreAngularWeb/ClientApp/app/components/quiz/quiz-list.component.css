@@ -3,10 +3,11 @@
 }
 .panel .panel-heading {
   color: #fefefe;
+  padding: 10px;
 }
 .panel .panel-heading .fa {
   float: right;
-  font-size: 41px;
+  font-size: 32px;
   color: #d6d6d6;
 }
 .panel .panel-body {
