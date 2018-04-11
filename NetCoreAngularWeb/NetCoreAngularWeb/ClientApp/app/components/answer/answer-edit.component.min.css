@@ -1,1 +1,1 @@
-﻿.answer-edit{width:80%}@media(max-width:767px){.answer-edit{width:100%}}.answer-edit textarea{min-height:100px}.answer-edit select{max-width:200px}.answer-edit .commands{margin-top:20px}
+﻿.answer-edit{width:80%}@media(max-width:767px){.answer-edit{width:100%}}.answer-edit textarea{min-height:100px}.answer-edit select{max-width:200px}.answer-edit .commands{margin-top:20px}.form-group .invalid-feedback:before{display:inline-block;font-family:'FontAwesome';content:"";float:right;font-size:12px;margin:4px 5px 20px 0;color:red}

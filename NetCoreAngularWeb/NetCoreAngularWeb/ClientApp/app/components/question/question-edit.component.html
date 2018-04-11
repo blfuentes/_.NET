@@ -1,17 +1,57 @@
 ﻿<h2>{{title}}</h2>
 <div class="question-edit">
-    <div class="form-group">
-        <label for="text">Question text:</label>
-        <br />
-        <textarea id="text" [(ngModel)]="question.Text"
-                  placeholder="enter a suitable text..." class="form-control"></textarea>
-    </div>
-    <div>
-        <input *ngIf="editMode" type="button" value="Apply Changes" (click)="onSubmit(question)" class="btn btn-success"/>
-        <input *ngIf="!editMode" type="button" value="Create the Question!" (click)="onSubmit(question)" class="btn btn-sm btn-primary"/>
-        <input type="button" value="Cancel" (click)="onBack()" class="btn btn-sm btn-default"/>
-    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-    <answer-list *ngIf="editMode" [question]="question"></answer-list>
+        <div class="form-group">
+            <label for="text">Question text:</label>
+            <br />
+            <textarea id="text" [ngClass]="{' is-invalid invalid-feedback d-inline-block ' : hasError('Text')}"
+                      formControlName="Text" required
+                      placeholder="enter a suitable text..." class="form-control">
 
+            </textarea>
+            <div *ngIf="hasError('Text')" class="invalid-feedback d-inline-block">
+                Text is a required field: please insert a valid text.
+            </div>
+        </div>
+        <div>
+            <button *ngIf="editMode" type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-success">
+                Apply Changes
+            </button>
+            <button *ngIf="!editMode" type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-sm btn-primary">
+                Create the Question!
+            </button>
+            <button type="submit"
+                    (click)="onBack()"
+                    class="btn btn-sm btn-default">
+                Cancel
+            </button>
+        </div>
+
+        <answer-list *ngIf="editMode" [question]="question"></answer-list>
+    </form>
+</div>
+
+<div class="panel panel-info"
+     style="margin-top: 20px;">
+    <div class="panel-heading">Form debug info</div>
+    <div class="panel-body">
+        <p><strong>Form value:</strong></p>
+        <div class="form-text">
+            {{ form.value | json }}
+        </div>
+        <p><strong>Form status:</strong></p>
+        <div class="form-text">
+            {{ form.status | json }}
+        </div>
+        <p><strong>Form activity log:</strong></p>
+        <div class="form-text">
+            <span *ngIf="activityLog"
+                  [innerHTML]="activityLog"></span>
+        </div>
+    </div>
 </div>

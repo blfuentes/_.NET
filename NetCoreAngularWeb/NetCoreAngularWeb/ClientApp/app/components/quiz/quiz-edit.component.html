@@ -1,25 +1,25 @@
 ﻿<div class="quiz-edit">
     <h2>{{title}}</h2>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="form-group"
-             [ngClass]="{'has-error has-feedback' : form.get('Title').errors?.required }">
+        <div class="form-group">
             <label for="title">Quiz title:</label>
             <br />
             <input type="text" id="title"
-                   formControlName="Title"
+                   formControlName="Title" required
                    placeholder="choose a title..."
-                   class="form-control" />
-            <span *ngIf="form.get('Title').errors?.required"
-                  class="fa fa-eraser form-control invalid-feedback form-control-feedback"
+                   class="form-control"
+                   [ngClass]="{'is-invalid invalid-feedback d-inline-block ' : hasError('Title')}" />
+            <!--<span *ngIf="hasError('Title')"
+                  class="fa fa-eraser invalid-feedback d-block"
                   aria-hidden="true">
-            </span>
-            <div *ngIf="(form.get('Title').dirty
-                     || form.get('Title').touched)
-                     && form.get('Title').errors?.required"
-                 class="text-danger">
-                <small>
-                    Title is required field: please insert a valid title
-                </small>
+            </span>-->
+            <!--<span *ngIf="form.get('Title').errors?.required"
+                  class="invalid-feedback d-inline-block"
+                  aria-hidden="true">
+            </span>-->
+            <div *ngIf="hasError('Title')"
+                 class="invalid-feedback d-inline-block">
+                Title is required field: please insert a valid title
             </div>
         </div>
         <div class="form-group">

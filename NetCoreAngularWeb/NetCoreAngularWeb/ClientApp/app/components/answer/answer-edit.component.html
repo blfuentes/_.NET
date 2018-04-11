@@ -1,27 +1,54 @@
 ﻿<h2>{{title}}</h2>
 <div class="answer-edit">
-    <div>
-        <label for="text">Answer text:</label>
-        <br />
-        <textarea id="text" [(ngModel)]="answer.Text"
-                  placeholder="enter a suitable text..."></textarea>
-    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="text">Answer text:</label>
+            <br />
+            <textarea id="text"
+                      formControlName="Text" required
+                      class="form-control"
+                      [ngClass]="{ 'is-invalid invalid-feedback d-inline-block' : hasError('Text') }"
+                      placeholder="enter a suitable text...">
+            </textarea>
+            <div *ngIf="hasError('Text')"
+                 class="is-invalid invalid-feedback d-inline-block">
+                Text is a required field: please insert a valid text.
+            </div>
+        </div>
 
-    <div>
-        <label for="value">Score Value:</label>
-        <br />
-        <select id="value" name="value" [(ngModel)]="answer.Value">
-            <option *ngFor="let num of [-5,-4,-3,-2,-1,0,1,2,3,4,5]"
-                    [value]="num">
-                {{num}}
-            </option>
-        </select>
-    </div>
+        <div class="form-group">
+            <label for="value">Score Value:</label>
+            <br />
+            <select id="value" formControlName="Value" required
+                    class="form-control"
+                    [ngClass]="{ 'is-invalid invalid-feedback d-inline-block' : hasError('Value') }">
+                <option *ngFor="let num of [-5,-4,-3,-2,-1,0,1,2,3,4,5]"
+                        [value]="num">
+                    {{num}}
+                </option>
+            </select>
+            <div *ngIf="hasError('Value')"
+                 class="is-invalid invalid-feedback d-inline-block">
+                Please select a valid number between -5 and 5.
+            </div>
+        </div>
 
-    <div>
-        <input *ngIf="editMode" type="button" value="Apply Changes" (click)="onSubmit(answer)"  class="btn btn-success" />
-        <input *ngIf="!editMode" type="button" value="Create the Answer!" (click)="onSubmit(answer)" class="btn btn-sm btn-primary"/>
-        <input type="button" value="Cancel" (click)="onBack()" class="btn btn-sm btn-default"/>
-    </div>
+        <div class="form-group commands">
+            <button *ngIf="editMode" type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-success">
+                Apply Changes
+            </button>
+            <button *ngIf="!editMode" type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-sm btn-primary">
+                Create the Answer!
+            </button>
+            <button type="submit" (click)="onBack()"
+                    class="btn btn-sm btn-default">
+                Cancel
+            </button>
+        </div>
+    </form>
 </div>
 
