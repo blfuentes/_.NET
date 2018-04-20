@@ -63,7 +63,7 @@ export class QuestionEditComponent {
         this.activityLog = '';
         this.log("Form has been initialized.");
 
-        // read to form changes
+        // react to form changes
         this.form.valueChanges
             .subscribe(val => {
                 if (!this.form.dirty) {
@@ -74,7 +74,7 @@ export class QuestionEditComponent {
                 }
             });
 
-        // read to changes in the form.Text control
+        // react to changes in the form.Text control
         this.form.get('Text')!.valueChanges
             .subscribe(val => {
                 if (!this.form.dirty) {

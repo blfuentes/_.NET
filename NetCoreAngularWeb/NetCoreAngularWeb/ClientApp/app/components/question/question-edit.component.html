@@ -36,20 +36,20 @@
     </form>
 </div>
 
-<div class="panel panel-info"
+<div class="card panel bg-info"
      style="margin-top: 20px;">
-    <div class="panel-heading">Form debug info</div>
-    <div class="panel-body">
+    <div class="card-header">Form debug info</div>
+    <div class="card-body bg-light">
         <p><strong>Form value:</strong></p>
-        <div class="form-text">
+        <div class="form-text text-info">
             {{ form.value | json }}
         </div>
         <p><strong>Form status:</strong></p>
-        <div class="form-text">
+        <div class="form-text text-info">
             {{ form.status | json }}
         </div>
         <p><strong>Form activity log:</strong></p>
-        <div class="form-text">
+        <div class="form-text text-info">
             <span *ngIf="activityLog"
                   [innerHTML]="activityLog"></span>
         </div>
