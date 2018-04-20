@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Mapster;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using NetCoreAngularWeb.Data;
 using NetCoreAngularWeb.Data.Models;
 using NetCoreAngularWeb.ViewModels;
@@ -15,8 +17,11 @@ namespace NetCoreAngularWeb.Controllers
     public class AnswerController : BaseApiController
     {
         #region Constructor
-        public AnswerController(ApplicationDbContext context)
-            : base(context) { }
+        public AnswerController(ApplicationDbContext context,
+                                RoleManager<IdentityRole> roleManager,
+                                UserManager<ApplicationUser> userManager,
+                                IConfiguration configuration)
+            : base(context, roleManager, userManager, configuration) { }
         #endregion
 
         #region RESTful conventions methods 
