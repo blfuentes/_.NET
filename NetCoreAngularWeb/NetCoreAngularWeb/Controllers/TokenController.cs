@@ -35,7 +35,7 @@ namespace NetCoreAngularWeb.Controllers
         #endregion
 
         [HttpPost("Auth")]
-        public async Task<IActionResult> Jwt([FromBody]TokenRequestViewModel model)
+        public async Task<IActionResult> Auth([FromBody]TokenRequestViewModel model)
         {
             // return a generic HTTP Status 500 (server Error)
             // if the client payload is invalid.
