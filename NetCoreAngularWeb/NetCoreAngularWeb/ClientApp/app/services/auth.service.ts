@@ -1,6 +1,7 @@
 ﻿import { EventEmitter, Inject, Injectable, PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { map, catchError } from 'rxjs/operators';
 import { Observable } from "rxjs";
 import 'rxjs/Rx';
 
@@ -28,22 +29,24 @@ export class AuthService {
         };
 
         return this.http.post<TokenResponse>(url, data)
-            .map((res) => {
-                let token = res && res.token;
-                // if the token is there, login has been successful
-                if (token) {
-                    // store username and jwt token
-                    this.setAuth(res);
-                    // successful login
-                    return true;
-                }
+            .pipe(
+                map(res => {
+                    let token = res && res.token;
+                    if (token) {
+                        this.setAuth(res);
+                        return true;
+                    }
+                    else {
+                        //failed login
+                        return Observable.throwError('Unauthorized');
+                    }
 
-                // failed login
-                return Observable.throw('Unauthorized');
-            })
-            .catch(error => {
-                return new Observable<any>(error);
-            });
+                }),
+                catchError(error => {
+                    //console.log(error);
+                    return new Observable<any>(error);
+                })
+            );
     }
 
     // performs the logout
