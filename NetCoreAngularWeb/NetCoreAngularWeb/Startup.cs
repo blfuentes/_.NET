@@ -29,8 +29,6 @@ namespace NetCoreAngularWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-
             // Add EntityFramework support for SqlServer
             services.AddEntityFrameworkSqlServer();
 
@@ -68,12 +66,16 @@ namespace NetCoreAngularWeb
                     ClockSkew = TimeSpan.Zero,
 
                     // security switches
-                    RequireExpirationTime = true,
                     ValidateIssuer = true,
-                    ValidateIssuerSigningKey = true,
                     ValidateAudience = true,
+                    RequireExpirationTime = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true
                 };
+                cfg.IncludeErrorDetails = true;
             });
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

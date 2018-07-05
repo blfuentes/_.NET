@@ -85,7 +85,7 @@ namespace NetCoreAngularWeb.Controllers
 
                 var token = new JwtSecurityToken(
                         issuer: Configuration["Auth:Jwt:Issuer"],
-                        audience: Configuration["Auth:Jwt:Audicnete"],
+                        audience: Configuration["Auth:Jwt:Audience"],
                         claims: claims,
                         notBefore: now,
                         expires:

@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+
 import { AuthService } from './services/auth.service';
+import { AuthInterceptor } from './services/auth.interceptor';
+
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +23,7 @@ import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { QuizSearchComponent } from './components/quiz/quiz-search.component';
+import { Http } from '../../node_modules/@angular/http';
 
 
 @NgModule({
@@ -42,7 +46,12 @@ import { QuizSearchComponent } from './components/quiz/quiz-search.component';
         QuizSearchComponent
     ],
     providers: [
-        AuthService
+        AuthService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true
+        }
     ],
     imports: [
         CommonModule,

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -54,6 +55,7 @@ namespace NetCoreAngularWeb.Controllers
         /// </summary> 
         /// <param name="model">The QuestionViewModel containing the data to insert</param> 
         [HttpPut]
+        [Authorize]
         public IActionResult Put([FromBody]QuestionViewModel model)
         {
             // return a generic HTTP Status 500 (Server Error)
@@ -87,6 +89,7 @@ namespace NetCoreAngularWeb.Controllers
         /// </summary> 
         /// <param name="model">The QuestionViewModel containing the data to update</param> 
         [HttpPost]
+        [Authorize]
         public IActionResult Post([FromBody]QuestionViewModel model)
         {
             // return a generic HTTP Status 500 (Server Error)
@@ -128,6 +131,7 @@ namespace NetCoreAngularWeb.Controllers
         /// </summary> 
         /// <param name="id">The ID of an existing Question</param> 
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             // retrieve the question from the Database
