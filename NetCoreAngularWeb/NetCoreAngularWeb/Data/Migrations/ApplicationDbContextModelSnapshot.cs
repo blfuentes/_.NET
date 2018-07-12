@@ -312,6 +312,31 @@ namespace NetCoreAngularWeb.Data.Migrations
                     b.ToTable("Results");
                 });
 
+            modelBuilder.Entity("NetCoreAngularWeb.Data.Models.Token", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ClientId")
+                        .IsRequired();
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<int>("Type");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.Property<string>("Value")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tokens");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
@@ -386,6 +411,14 @@ namespace NetCoreAngularWeb.Data.Migrations
                     b.HasOne("NetCoreAngularWeb.Data.Models.Quiz", "Quiz")
                         .WithMany("Results")
                         .HasForeignKey("QuizId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("NetCoreAngularWeb.Data.Models.Token", b =>
+                {
+                    b.HasOne("NetCoreAngularWeb.Data.Models.ApplicationUser", "User")
+                        .WithMany("Tokens")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

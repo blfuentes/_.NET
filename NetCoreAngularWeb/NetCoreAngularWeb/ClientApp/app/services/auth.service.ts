@@ -2,8 +2,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { map, catchError } from 'rxjs/operators';
-import { Observable } from "rxjs";
-import 'rxjs/Rx';
+import { Observable, throwError } from "rxjs";
 
 @Injectable()
 export class AuthService {
@@ -28,22 +27,42 @@ export class AuthService {
             scope: "offline_access profile email"
         };
 
+        return this.getAuthFromServer(url, data);
+    }
+
+    // try to refresh token
+    refreshToken(): Observable<boolean> {
+        var url = "api/token/auth";
+        var data = {
+            client_id: this.clientId,
+            // required when signing up with username/password
+            grant_type: "refresh_token",
+            refresh_token: this.getAuth()!.refresh_token,
+            // space-separated list of scopes for which the token is issued
+            scope: "offline_access profile email"
+        };
+
+        return this.getAuthFromServer(url, data);
+    }
+
+    // retrieve the access & refresh tokens from the server
+    getAuthFromServer(url: string, data: any): Observable<boolean> {
         return this.http.post<TokenResponse>(url, data)
             .pipe(
-                map(res => {
+                map((res) => {
                     let token = res && res.token;
+                    // if the token is there, login has been successful
                     if (token) {
+                        // store username and jwt token
                         this.setAuth(res);
+                        // successful login
                         return true;
+                    } else {
+                        // failed login
+                        return throwError('Unauthorized');
                     }
-                    else {
-                        //failed login
-                        return Observable.throwError('Unauthorized');
-                    }
-
                 }),
                 catchError(error => {
-                    //console.log(error);
                     return new Observable<any>(error);
                 })
             );
